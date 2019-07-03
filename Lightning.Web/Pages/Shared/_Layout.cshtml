@@ -4,11 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Lightning.Web</title>
-   
+
     <environment include="Development">
         <link rel="stylesheet" href="~/assets/styles/salesforce-lightning-design-system.css" />
     </environment>
-   
+
     @*<environment include="Development">
             <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         </environment>
@@ -22,28 +22,47 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <button slds-button>Button</button>
-    <button slds-button variante="Neutral">
-        <slds-icon sprite="Utility" icon="download"></slds-icon>
-        Neutral Button
-    </button>
-    <button slds-button variante="Destructive" >Brand Button</button>
-    <button slds-button variante="OutlineBrand">Outline Brand Button</button>
-    <button slds-button variante="Destructive">Destructive Button</button>
-    @*<button slds-button class="slds-button_text-destructive">Text Destructive Button</button>
-    <button slds-button class="slds-button_success">Success Button</button>*@
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_2-of-12">
+            
+                <nav class="slds-nav-vertical" aria-label="Sub page">
+                    <div class="slds-nav-vertical__section">
+                        <h2 id="entity-header" class="slds-nav-vertical__title">Components</h2>
+                        <ul aria-describedby="entity-header">
+                            <li class="slds-nav-vertical__item slds-is-active">
+                                <a href="javascript:void(0);" class="slds-nav-vertical__action" aria-current="page">Alerts</a>
+                            </li>
+                            <li class="slds-nav-vertical__item">
+                                <a href="javascript:void(0);" class="slds-nav-vertical__action">Accordion</a>
+                            </li>
+                            <li class="slds-nav-vertical__item">
+                                <a href="javascript:void(0);" class="slds-nav-vertical__action">Activity Timeline</a>
+                            </li>
+                            <li class="slds-nav-vertical__item">
+                                <a href="javascript:void(0);" class="slds-nav-vertical__action">Alert</a>
+                            </li>
+                            <li class="slds-nav-vertical__item">
+                                <a href="javascript:void(0);" class="slds-nav-vertical__action">Avatar</a>
+                            </li>
+                            <li class="slds-nav-vertical__item">
+                                <a href="javascript:void(0);" class="slds-nav-vertical__action">Badges</a>
+                            </li>
+                            <li class="slds-nav-vertical__item">
+                                <a asp-page="/Buttons" class="slds-nav-vertical__action">Buttons</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </nav>
+            
+        </div>
+        <div class="slds-col slds-size_10-of-12">
+            @RenderBody()
+        </div>
+    </div>
 
-  
 
-    <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
-        @*<svg class="slds-icon slds-icon-text-default" aria-hidden="true">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#announcement"></use>
-        </svg>*@
-        <slds-icon sprite="Utility" icon="announcement"  icon-color="Success"></slds-icon>
-        <span class="slds-assistive-text">Description of icon when needed</span>
-    </span>
-
-    @RenderBody()
+   
 
 
 
