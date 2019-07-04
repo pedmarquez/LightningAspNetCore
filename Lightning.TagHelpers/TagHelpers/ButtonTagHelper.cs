@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
 using System.Collections.Generic;
 
-namespace Lightning.TagHelpers
+namespace Lightning.Lib.TagHelpers
 {
     public enum Variante
     {

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lightning.Web", "Lightning.Web\Lightning.Web.csproj", "{AC756472-5D5A-4A10-90C0-281D40905AF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lightning.TagHelpers", "Lightning.TagHelpers\Lightning.TagHelpers.csproj", "{E3C8759E-E6EC-464E-ACCB-8EBE6387B0FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lightning.Lib", "Lightning.TagHelpers\Lightning.Lib.csproj", "{E3C8759E-E6EC-464E-ACCB-8EBE6387B0FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

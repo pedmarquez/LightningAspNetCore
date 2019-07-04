@@ -22,47 +22,52 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
+    
     <div class="slds-grid slds-wrap">
         <div class="slds-col slds-size_2-of-12">
-            
-                <nav class="slds-nav-vertical" aria-label="Sub page">
-                    <div class="slds-nav-vertical__section">
-                        <h2 id="entity-header" class="slds-nav-vertical__title">Components</h2>
-                        <ul aria-describedby="entity-header">
-                            <li class="slds-nav-vertical__item slds-is-active">
-                                <a href="javascript:void(0);" class="slds-nav-vertical__action" aria-current="page">Alerts</a>
-                            </li>
-                            <li class="slds-nav-vertical__item">
-                                <a href="javascript:void(0);" class="slds-nav-vertical__action">Accordion</a>
-                            </li>
-                            <li class="slds-nav-vertical__item">
-                                <a href="javascript:void(0);" class="slds-nav-vertical__action">Activity Timeline</a>
-                            </li>
-                            <li class="slds-nav-vertical__item">
-                                <a href="javascript:void(0);" class="slds-nav-vertical__action">Alert</a>
-                            </li>
-                            <li class="slds-nav-vertical__item">
-                                <a href="javascript:void(0);" class="slds-nav-vertical__action">Avatar</a>
-                            </li>
-                            <li class="slds-nav-vertical__item">
-                                <a href="javascript:void(0);" class="slds-nav-vertical__action">Badges</a>
-                            </li>
-                            <li class="slds-nav-vertical__item">
-                                <a asp-page="/Buttons" class="slds-nav-vertical__action">Buttons</a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                </nav>
-            
+
+            <nav class="slds-nav-vertical" aria-label="Sub page">
+                <div class="slds-nav-vertical__section">
+                    <h2 id="entity-header" class="slds-nav-vertical__title">Components</h2>
+                    <ul aria-describedby="entity-header">
+                        @*<li class="slds-nav-vertical__item ">
+                            <a href="javascript:void(0);" class="slds-nav-vertical__action" aria-current="page">Accordion</a>
+                        </li>*@
+                        @*<li class="slds-nav-vertical__item">
+                            <a href="javascript:void(0);" class="slds-nav-vertical__action">Accordion</a>
+                        </li>*@
+                        @*<li class="slds-nav-vertical__item">
+                            <a href="javascript:void(0);" class="slds-nav-vertical__action">Activity Timeline</a>
+                        </li>*@
+                        <li class="slds-nav-vertical__item  @(ViewContext.RouteData.Values["page"].ToString() == "/Alert" ? "slds-is-active":null)">
+                            <a asp-page="/Alert" class="slds-nav-vertical__action">Alert</a>
+                        </li>
+                        <li class="slds-nav-vertical__item">
+                            <a href="javascript:void(0);" class="slds-nav-vertical__action">Avatar</a>
+                        </li>
+                        <li class="slds-nav-vertical__item  @(ViewContext.RouteData.Values["page"].ToString() == "/Badges" ? "slds-is-active":null)">
+                            <a asp-page="/Badges" class="slds-nav-vertical__action">Badges</a>
+                        </li>
+                        <li class="slds-nav-vertical__item  @(ViewContext.RouteData.Values["page"].ToString() == "/Buttons" ? "slds-is-active":null)">
+                            <a asp-page="/Buttons" class="slds-nav-vertical__action">Buttons</a>
+                        </li>
+                        <li class="slds-nav-vertical__item  @(ViewContext.RouteData.Values["page"].ToString() == "/Icons" ? "slds-is-active":null)">
+                            <a asp-page="/Icons" class="slds-nav-vertical__action">Icons</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+
         </div>
         <div class="slds-col slds-size_10-of-12">
+            
             @RenderBody()
         </div>
     </div>
 
 
-   
+
 
 
 

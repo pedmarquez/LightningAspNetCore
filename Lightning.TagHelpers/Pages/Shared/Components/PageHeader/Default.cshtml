@@ -1,0 +1,30 @@
+﻿@using Lightning.Lib.TagHelpers;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var sprite = (IconSprite)@ViewData["IconSprite"];
+}
+<div class="slds-page-header">
+    <div class="slds-page-header__row">
+        <div class="slds-page-header__col-title">
+            <div class="slds-media">
+                <div class="slds-media__figure">
+                    <slds-icon class="slds-page-header__icon" icon-sprite="@sprite" icon-name="@ViewData["IconName"]">
+
+                    </slds-icon>
+                </div>
+                <div class="slds-media__body">
+                    <div class="slds-page-header__name">
+                        <div class="slds-page-header__name-title">
+                            <h1>
+                                <span class="slds-page-header__title slds-truncate" title="@ViewData["Title"]">  @ViewData["Title"]</span>
+                            </h1>
+                        </div>
+                    </div>
+                    <p class="slds-page-header__name-meta"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

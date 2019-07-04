@@ -14,7 +14,7 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\Lightning.TagHelpers\Lightning.TagHelpers.csproj" />
+    <ProjectReference Include="..\Lightning.TagHelpers\Lightning.Lib.csproj" />
   </ItemGroup>
 
 </Project>
